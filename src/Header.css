@@ -4,14 +4,15 @@
   font-family: 'Roboto', sans-serif;
   transition: all 0.50s linear;
   width: 100%;
-  padding: 20px;
-  padding-top:20px;
+  padding: 15px;
+  padding-top:15px;
   top: 0px;
   left: 0px;
   position: absolute;
   border-bottom: 1px solid darkgray;
   box-sizing: border-box; 
   z-index: 999;
+  background-color:white;
 }
 
 .settings {
