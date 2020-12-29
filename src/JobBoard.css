@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+.jobboard {
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar {
+    position: absolute;
+    width: 345px;
+    height: 814px;
+    left: 0px;
+    top: 86px;
+    background: #EAEAEA;
+    border: 0.5px solid #828282;
+    box-sizing: border-box;
+}
+
+.edit{
+    position: absolute;
+    width: 34px;
+    height: 23px;
+    left: 291px;
+    top: 103px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    text-decoration-line: underline;
+    color: #4A4141;
+}
+
+.profile-pic {
+    position: absolute;
+    left: 6.81%;
+    right: 82.78%;
+    top: 15.44%;
+    bottom: 67.89%;
+    background: #C4C4C4;
+    border-radius: 50px;
+}
+
+.my-profile-header {
+    position: absolute;
+    width: 116px;
+    height: 29px;
+    left: 115px;
+    top: 307px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 29px;
+
+    color: #003366;
+}
+
+.expertise {
+    position: absolute;
+    width: 185px;
+    height: 23px;
+    left: 22px;
+    top: 370px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #003366;
+
+}
+
+.yoe {
+    position: absolute;
+    width: 266px;
+    height: 23px;
+    left: 22px;
+    top: 444px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #003366;
+}
+
+.min-wage {
+    position: absolute;
+    width: 278px;
+    height: 23px;
+    left: 22px;
+    top: 481px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #003366;
+}
+
+.license {
+    position: absolute;
+    width: 244px;
+    height: 23px;
+    left: 22px;
+    top: 518px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #003366;
+
+}
