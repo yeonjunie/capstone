@@ -52,4 +52,4 @@ class JobBoard extends React.Component {
   }
 }
 
-export default Jobboard;
+export default JobBoard;
