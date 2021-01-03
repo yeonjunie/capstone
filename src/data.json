@@ -1,0 +1,38 @@
+[
+  {
+    "section": "location",
+    "question": "What is your location preference?",
+    "options": [
+      "Providence",
+      "Warwick",
+      "Newport"
+    ]
+  },
+  {
+    "section": "experience",
+    "question": "How many years of experience?",
+    "options": [
+      "1 year",
+      "2 years",
+      "3+ years"
+    ]
+  },
+  {
+    "section": "wage",
+    "question": "What is your expected salary?",
+    "options": [
+      "~$20/hr",
+      "$20-40/hr",
+      "+$40/hr"
+    ]
+  },
+  {
+    "section": "license",
+    "question": "What is your license type?",
+    "options": [
+      "Electrician Apprentice",
+      "Journeyman Electrician",
+      "Master Electrician"
+    ]
+  }
+]
