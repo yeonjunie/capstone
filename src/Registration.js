@@ -40,7 +40,7 @@ class Registration extends React.Component {
 
   goToSearch = () => {
     this.props.history.push({
-      pathname: "/",
+      pathname: "/jobboard",
       data: this.state.selected
     });
   }
