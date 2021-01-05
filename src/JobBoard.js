@@ -3,6 +3,7 @@ import './JobBoard.css';
 import Header from "./Header.js";
 import BriefCaseLogo from './briefcase.svg';
 import CompanyLogo1 from './company1.svg';
+import { ContactsOutlined } from '@material-ui/icons';
 
 class JobBoard extends React.Component {
   goHome = () => {
@@ -21,6 +22,8 @@ class JobBoard extends React.Component {
 //       this.props.history.push("/myjobs");
 //   }
   render() {
+    const {data} = this.props.location;
+    console.log(data);
     return (
       <div className="jobboard">
         <Header goToHome={this.goHome} goToLogin={this.goLogin} goToSignUp={this.goSignUp} page={"home"}/>
@@ -29,16 +32,16 @@ class JobBoard extends React.Component {
                 <div className="edit">edit</div>
                 <div className="profile-pic"></div>
                 <div className="my-profile-header">My Profile</div>
-                <div className="expertise">Expertise: "Electronic"</div>
+                <div className="expertise">Expertise: Electronics</div>
                 {/* Replace key-info-desc with function to keep track of selections 
                 + make it reponsive*/}
-                <div className="location">Location: "Providence, RI"</div>
+                <div className="location">{"Location: " + data[1]}</div>
                 
-                <div className="yoe">Years of Experience: "5+ Years"</div>
+                <div className="yoe">{"Years of Experience: " + data[2]}</div>
                 
-                <div className="min-wage">Minimum Wage: "$20-40/hour"</div>
+                <div className="min-wage">{"Minimum Wage: " + data[3]}</div>
                 
-                <div className="license">License: "Master Electrician"</div>
+                <div className="license">{"License: " + data[4]}</div>
                 
 
             {/* </div> */}

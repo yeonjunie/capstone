@@ -16,9 +16,9 @@ class Header extends React.Component {
         <div className="header__content">
           <div className="logo" onClick={goHome}> Electry </div>
           <div className="settings">
-            <div class="signup_button" onClick={goSignUp}> Sign Up </div>
+            <div className="signup_button" onClick={goSignUp}> Sign Up </div>
             <div className="between">
-            <div class="login_button" onClick={goLogin}> Login </div>
+            <div className="login_button" onClick={goLogin}> Login </div>
             </div>
           </div>
         </div>
