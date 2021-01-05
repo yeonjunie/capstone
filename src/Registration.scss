@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+.registration {
+  font-family: 'Roboto', sans-serif;
+  display:flex;
+  position: fixed;
+  height: 100%; 
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position:flex;
+}
+
+.question-container{
+  margin-top:0px;
+}
+
+.personalInfo {
+  padding-top:100px;
+  padding-left:60px;
+}
+.field {
+  padding-bottom: 20px;
+}
+
+.progressBar {
+  display:flex;
+  padding-left: 80px;
+  /* margin-top: -100px; */
+    &::before {
+      content: "";
+      background-color: $lightgrey1;
+      width: 430px;
+      margin-left: 3px;
+      height: 3px;
+      border-radius: 2px;
+      position: absolute;
+      z-index: -1;
+      margin-top: 12px;
+  }
+}
+
+.circle-container {
+  padding-right: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  border: 5px solid #F8D20D;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.circle-desc {
+  font-size: 10px;
+  padding-top:4px;
+  /* margin-left:-5px; */
+}
+
+.circle-filled {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #F8D20D;
+  border: 5px solid #F8D20D;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 2px;
+  background: #F8D20D;
+}
+
+.question {
+  color: #003366;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  padding:20px;
+  padding-left:60px;
+  padding-right:60px;
+  padding-top:100px;
+}
+
+.answer-container{
+  padding-left:80px;
+}
+
+.buttons{
+  display: flex;
+  align-items: stretch;
+  padding-top:8px;
+  padding-left:180px;
+}
+
+.goback_visible {
+  cursor: pointer;
+  text-decoration: underline;
+  padding-top:5px;
+  padding-right: 10px;
+  font-size:14px;
+}
+
+.goback_invisible {
+  cursor: pointer;
+  text-decoration: underline;
+  padding-top:5px;
+  padding-right: 10px;
+  font-size:14px;
+  visibility: hidden;
+}
+
+.login-button-container {
+  padding:0;
+}
+
+.login-button {
+  height: 29px;
+  width: 77px;
+  background: #F8D20D;
+  background-color: #F8D20D;
+  color: #003366;
+  border: 3px solid #F8D20D;
+  box-sizing: border-box;
+  border-radius: 15px;
+  cursor: pointer;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+

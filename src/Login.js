@@ -2,8 +2,6 @@ import React from 'react';
 import './Login.css';
 import Header from "./Header.js";
 import TextField from '@material-ui/core/TextField';
-// import { makeStyles } from '@material-ui/core/styles';
-
 
 class Login extends React.Component {
   goHome = () => {
@@ -20,7 +18,7 @@ class Login extends React.Component {
   render() {
     return(
       <div className="login">
-        <Header goToHome={this.goHome} goToLogin={this.goLogin} goToSignUp={this.goSignUp} page={"home"}/>
+        <Header goToHome={this.goHome} goToLogin={this.goLogin} goToSignUp={this.goSignUp}/>
         <div className="white">
           <div className="welcomeback">
             welcome back
