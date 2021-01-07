@@ -1,45 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
 
+
 .jobboard {
   font-family: 'Roboto', sans-serif;
+  display:flex;
+  flex-direction: column;
 }
 
+.header-div {
+    display: flex;
+    align-self: center;
+    /* padding: 10px; */
+    /* flex-grow: 3; */
+
+}
+
+
+.main-area {
+    margin-top: 4.5em;
+    display:flex;
+    flex-direction: row;
+}
+
+
 .sidebar {
-    position: absolute;
-    width: 345px;
-    height: 800px;
-    left: 0px;
-    top: 70px;
+    /* position: absolute; */
+    /* width: 345px;
+    height: 800px; */
+    /* left: 0px;
+    top: 70px; */
+    
+    width: 25vw;
+    
+    /* flex-grow: 100; */
     background: #EAEAEA;
     border: 0.5px solid #828282;
     box-sizing: border-box;
+    display:flex;
+    /* align-items: center; */
+    flex-direction: column;
+    
 }
 
-.main-area {
-    position: absolute;
-    width: 1200px;
-    height: 700px;
-    left: 345px;
-    top: 70px;
+.job-area {
+    /* position: absolute; */
+    /* width: 1200px;
+    height: 700px; */
+    /* left: 345px;
+    top: 70px; */
+    /* flex-grow: 1; */
+    width: 75vw;
     display:flex;
-
     flex-direction: column;
-    align-items: flex-start;
+
+    /* align-items: center; */
 
     
 }
 
+
+
+.recommended-div {
+    display:flex;
+    align-items: flex-start;
+
+}
+
+.jobs-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.edit-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    /* justify-items: end; 
+    align-items: flex-end; */
+    padding: 1em;
+}
+
 .edit{
-    position: absolute;
-    width: 34px;
-    height: 23px;
-    left: 291px;
-    top: 20px;
+    /* position: absolute; */
+    /* width: 34px; */
+    /* height: 23px; */
+    /* text-align: right; */
+    /* left: 291px;
+    top: 20px; */
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
     line-height: 23px;
-    text-align: center;
+    text-align: right;
     text-decoration-line: underline;
     color: #4A4141;
     cursor: pointer;
@@ -49,22 +103,35 @@
     font-weight: bold;
   }
 
+.profile-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5em;
+    /* align-items: center;
+    justify-items: center; */
+}
+
+.profile-pic, .my-profile-header {
+    margin: 0.5em;
+}
 .profile-pic {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 100px;
-    top: 80px;
+    /* position: absolute; */
+    width: 10em;
+    height: 10em;
+    /* left: 100px;
+    top: 80px; */
     background: #C4C4C4;
-    border-radius: 100px;
+    border-radius: 10em;
 }
 
 .my-profile-header {
-    position: absolute;
-    width: 116px;
-    height: 29px;
-    left: 115px;
-    top: 250px;
+    /* position: absolute; */
+    /* width: 116px; */
+    /* height: 29px; */
+    /* left: 115px;
+    top: 250px; */
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -74,12 +141,25 @@
     color: #003366;
 }
 
+.preferences-div {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.expertise, .location, .yoe, .min-wage, .license {
+    margin: 1em;
+}
+
 .expertise {
-    position: absolute;
+    /* position: absolute; */
     /* width: 185px; */
     height: 23px;
-    left: 22px;
-    top: 320px;
+    /* left: 22px;
+    top: 320px; */
 
     font-family: Roboto;
     font-style: normal;
@@ -92,11 +172,11 @@
 }
 
 .location {
-    position: absolute;
+    /* position: absolute; */
     /* width: 218px; */
-    height: 23px;
-    left: 22px;
-    top: 357px;
+    /* height: 23px; */
+    /* left: 22px;
+    top: 357px; */
 
     font-family: Roboto;
     font-style: normal;
@@ -108,11 +188,11 @@
 }
 
 .yoe {
-    position: absolute;
+    /* position: absolute; */
     /* width: 266px; */
-    height: 23px;
-    left: 22px;
-    top: 394px;
+    /* height: 23px; */
+    /* left: 22px;
+    top: 394px; */
 
     font-family: Roboto;
     font-style: normal;
@@ -124,11 +204,11 @@
 }
 
 .min-wage {
-    position: absolute;
+    /* position: absolute; */
     /* width: 278px; */
-    height: 23px;
-    left: 22px;
-    top: 431px;
+    /* height: 23px; */
+    /* left: 22px;
+    top: 431px; */
 
     font-family: Roboto;
     font-style: normal;
@@ -140,11 +220,12 @@
 }
 
 .license {
-    position: absolute;
+    /* position: absolute; */
     /* width: 244px; */
-    height: 23px;
-    left: 22px;
-    top: 468px;
+    /* height: 23px; */
+    /* left: 22px;
+    top: 468px; */
+   
 
     font-family: Roboto;
     font-style: normal;
@@ -158,17 +239,47 @@
 
 .recommended-jobs-header {
     /* position: absolute; */
-    width: 277px;
-    height: 35px;
+    /* width: 277px; */
+    /* height: 35px; */
     /* left: 385px;
     top: 100px; */
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
-    line-height: 35px;
+    text-align: left;
+    /* line-height: 1em; */
     margin: 1em 0em 0em 2em;
 
     color: #003366;
 }
+/* Tablet */
+@media screen and (max-width: 800px) {
+    .sidebar {
+        width: 40vw;
+    }
+    
+    .job-area {
+        width:60vw;
+
+
+    }
+    
+  }
+
+/* Mobile */
+@media screen and (max-width: 530px) {
+    .profile-row{
+        padding: 0em;
+        justify-content: center;
+        align-items: center;
+    }
+    .sidebar,.main-area,.job-area {
+        width: 100vw;
+    }
+    
+    .main-area {
+        flex-direction: column;
+    }
+  }
 
