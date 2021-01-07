@@ -3,7 +3,10 @@ import './JobBoard.css';
 import Header from "./Header.js";
 import BriefCaseLogo from './briefcase.svg';
 import CompanyLogo1 from './company1.svg';
+import CompanyLogo2 from './company2.svg';
+import CompanyLogo3 from './company3.svg';
 import { ContactsOutlined } from '@material-ui/icons';
+import JobCard from './JobCard';
 
 class JobBoard extends React.Component {
   goHome = () => {
@@ -18,23 +21,25 @@ class JobBoard extends React.Component {
     this.props.history.push("/registration");
   }
 
-//   goMyJobs = () => {
-//       this.props.history.push("/myjobs");
-//   }
   render() {
-    const {data} = this.props.location;
+    const data = this.props.location.data;
     console.log(data);
+    // make obj array of the 3 companies 
+    const companies = [{name: 'Eastside Electric', logo: CompanyLogo1},{name: 'Prostar Energy', logo: CompanyLogo2},{name: 'Home Electric', logo: CompanyLogo3 }]
+    //make a obj array of wages depending on selection
+    const wage = [];
+
     return (
       <div className="jobboard">
         <Header goToHome={this.goHome} goToLogin={this.goLogin} goToSignUp={this.goSignUp} page={"home"}/>
         <div className="sidebar">
-            {/* <div> */}
-                <div className="edit">edit</div>
+            
+            {/* OnClick take user back to form editing */}
+                <div className="edit">edit</div> 
+
                 <div className="profile-pic"></div>
                 <div className="my-profile-header">My Profile</div>
                 <div className="expertise">Expertise: Electronics</div>
-                {/* Replace key-info-desc with function to keep track of selections 
-                + make it reponsive*/}
                 <div className="location">{"Location: " + data[1]}</div>
                 
                 <div className="yoe">{"Years of Experience: " + data[2]}</div>
@@ -42,25 +47,14 @@ class JobBoard extends React.Component {
                 <div className="min-wage">{"Minimum Wage: " + data[3]}</div>
                 
                 <div className="license">{"License: " + data[4]}</div>
-                
-
-            {/* </div> */}
+              
         </div>
         <div className="main-area">
-            <div className="recommended-jobs-header">Recommended Jobs</div>
-            <div className="job-card">
-                <img className="company-logo" src={CompanyLogo1} alt="Eastside Electric Logo"/>
-                <div className ="company-logo"/>
-                <div className="job-title">Master Electrician</div>
-                <div className="job-company">Eastside Electric</div>
-                <div className="job-desc">Providence, RI <br/>$36/hour <br/> 7+ years experience <br/> Master Electrician State License Required</div>
-                <div className="share-profile-button">  Share Profile</div>
-                <img className="briefcase" src={BriefCaseLogo} alt="briefcase"/>
-                
-                
-            </div>
-            
 
+            <div className="recommended-jobs-header">Recommended Jobs</div>
+            <JobCard curr_data={data} company={companies[0]}/>
+            <JobCard curr_data={data} company={companies[1]}/>
+            <JobCard curr_data={data} company={companies[2]}/>
             </div>
         
       </div>

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+ 
+.job-card {
+    /* position: absolute; */
+    width: 1026px;
+    height: 220px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items:normal;
+
+
+
+    background: #EAEAEA;
+    border-radius: 50px; 
+    
+    
+}
+
+.job-card:hover{
+
+    border: 1px solid gray;
+
+  }
+
+.logo-col {
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      flex-grow: 4;   
+      display: flex;
+      height: 200px;
+
+
+}
+
+.image-div {
+    /* width: 100px; */
+    align-self: center;
+    justify-self: center;
+    background-color: aquamarine;
+
+}
+
+.company-logo {
+    width: 20%;
+    height: 20%;
+    flex: 1;
+    
+    /* flex: auto; */
+   
+    /* display: flex;
+    align-self: flex-start; */
+    /* margin: 2.5em 0em 0em -30em; */
+}
+
+  .job-desc-col {
+      display:flex;
+      flex-direction: column;
+      align-items: flex-start;
+      flex-grow: 3;
+
+
+  }
+
+  .share-profile-col {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+  }
+ 
+
+
+
+ 
+.job-title {
+
+    height: 41px;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 41px;
+    cursor: pointer;
+
+    margin: 0.5em 0em 0em 0em;
+
+    
+
+    color: #000000;
+}
+
+.job-title:hover{
+    font-weight: bold;
+  }
+
+.job-company {
+
+    height: 33px;
+
+    margin: 0em 0em 0em 0em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.job-company:hover{
+    font-weight: bold;
+}
+
+.job-desc {
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 0em 0em 1em 0em;
+
+    color: #4A4141;
+}
+
+.share-profile-button {
+
+    width: 9em;
+    background: #1769BC;
+    border-radius: 0.5em;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0.125em 0.1em 0.125em 1.5em;
+    cursor: pointer;
+    margin: 3em;
+}
+
+.share-profile-button:hover{
+    font-weight: bold;
+}
+
+/* .briefcase { */
+    /* position: absolute; */
+    /* background-image: url("briefcase.svg"); */
+    /* margin: -10.25em 0em 0em -8.5em; */
+    /* color: black; */
+    /* background-color: black; */
+    /* background-size: 30px 30px; */
+    
+
+    /* transform: scale(1); */
+
+/* } */
+
