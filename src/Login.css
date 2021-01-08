@@ -39,9 +39,8 @@
 }
 
 .login-button-container {
-  padding-left: 200px;
-  padding-right:20px;
-  padding-bottom: 20px;
+  margin-left: 200px;
+  margin-bottom:30px;
 }
 
 .login-button {
