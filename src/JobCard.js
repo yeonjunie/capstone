@@ -24,19 +24,15 @@ class JobCard extends React.Component {
             return(<div className="share-profile-col"><div className="share-profile-button" onClick={this.addJob}> <img className="briefcase-logo" src={BriefCaseLogo} /> Share Profile</div> </div>)
 
         }
-        //change logo to the tick mark
-        //change text to profile shared
-        //add element in the share profile col '{company.name+ " will reach out if there’s a fit!"}'
     }
 
     addJob() {
         this.setState({profileShared: true});
-       
-
+        //update myJobsCount
     }
-
     removeJob() {
         this.setState({profileShared: false});
+        //update myJobsCount
     }
   render() {
     const data = this.props.curr_data;
