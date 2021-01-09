@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-img {
+.main-img {
   position: absolute;
   left: 530px;
   top: 72px;
@@ -74,7 +74,7 @@ img {
   .background-img-container {
     visibility: hidden;
   }
-  img {
+  .main-img {
     position: flex;
     height:0px;
     width:0px;

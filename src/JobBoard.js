@@ -1,6 +1,7 @@
 import React from 'react';
 import './JobBoard.css';
 import Header from "./Header.js";
+import HeaderJobs from "./HeaderJobs.js";
 import BriefCaseLogo from './briefcase.svg';
 import CompanyLogo1 from './company1.svg';
 import CompanyLogo2 from './company2.svg';
@@ -13,12 +14,12 @@ class JobBoard extends React.Component {
     this.props.history.push("/");
   }
 
-  goLogin = () => {
-    this.props.history.push("/login");
+  goMyJobs = () => {
+    this.props.history.push("/myJobs");
   }
 
-  goSignUp = () => {
-    this.props.history.push("/registration");
+  goSettings = () => {
+    this.props.history.push("/settings");
   }
 
   render() {
@@ -32,7 +33,8 @@ class JobBoard extends React.Component {
     return (
       <div className="jobboard">
         <div className="header-div">
-        <Header goToHome={this.goHome} goToLogin={this.goLogin} goToSignUp={this.goSignUp} page={"home"}/>
+        <HeaderJobs goToHome={this.goHome} goToLogin={this.goMyJobs} goToSignUp={this.goSettings} page={"home"}/>
+        
         </div>
         <div className="main-area">
             <div className="sidebar">

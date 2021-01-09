@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+.header {
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.50s linear;
+  width: 100%;
+  padding: 15px;
+  padding-top:15px;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  border-bottom: 1px solid darkgray;
+  box-sizing: border-box; 
+  z-index: 999;
+  background-color:white;
+}
+
+.settings {
+  display: flex;
+  align-items: stretch;
+  padding-top:8px;
+}
+
+.header__content {
+  margin: 0 auto;
+  width: 97%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 41px;
+  letter-spacing: 0.02em;
+  color: #003366;
+}
+
+.briefcase-logo {
+    width: 13%;
+    margin: 0px 2px 2.5px 0px;
+}
+
+
+.between {
+  padding-left: 25px;
+}
+

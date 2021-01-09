@@ -30,7 +30,7 @@ class JobCard extends React.Component {
 
             <div className="job-card">
                 <div className="logo-col">
-                    <h1>Logo Here</h1>
+                    {/* <h1>Logo Here</h1> */}
                     {/* <div className="image-div"> */}
                     <img className="company-logo" src={company.logo} alt="Company Logo"/>
                     {/* </div> */}
@@ -48,8 +48,8 @@ class JobCard extends React.Component {
 
                 </div>
                 <div className="share-profile-col">
-                    <div className="share-profile-button">  Share Profile</div>
-                      {/* <svg className="briefcase"/>    */}
+                    <div className="share-profile-button"> <img className="briefcase-logo" src={BriefCaseLogo} />  Share Profile</div>
+                      
                 </div>
                 
                 

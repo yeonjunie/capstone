@@ -4,7 +4,7 @@ import Header from "./Header.js";
 
 class Home extends React.Component {
   goHome = () => {
-    this.props.history.push("/jobboard"); 
+    this.props.history.push("/"); 
     // change to "/jobboard" to test JobBoard page
   }
   goLogin = () => {
@@ -27,7 +27,7 @@ class Home extends React.Component {
         </div>
       </div>
       <div className="background-img-container">
-        <img src="https://i.ibb.co/Jj5N77W/Screen-Shot-2020-12-27-at-17-23-04.png"/>
+        <img class="main-img" src="https://i.ibb.co/Jj5N77W/Screen-Shot-2020-12-27-at-17-23-04.png"/>
       </div>
       </div>
       );
