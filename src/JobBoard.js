@@ -18,23 +18,25 @@ class JobBoard extends React.Component {
     this.props.history.push("/myJobs");
   }
 
-  goSettings = () => {
-    this.props.history.push("/settings");
-  }
+
 
   render() {
-    const data = this.props.location.data;
+    let data = ['Aaron Alton', 'Providence', '5 years','$20','Master Electrician'];
+    
+    if (this.props.location.data != null) {
+      data = this.props.location.data;
+    } 
+    
     console.log(data);
     // make obj array of the 3 companies 
     const companies = [{name: 'Eastside Electric', logo: CompanyLogo1},{name: 'Prostar Energy', logo: CompanyLogo2},{name: 'Home Electric', logo: CompanyLogo3 }]
-    //make a obj array of wages depending on selection
-    const wage = [];
+
+  
 
     return (
       <div className="jobboard">
         <div className="header-div">
-        <HeaderJobs goToHome={this.goHome} goToLogin={this.goMyJobs} goToSignUp={this.goSettings} page={"home"}/>
-        
+        <HeaderJobs goToHome={this.goHome} goToMyJobs={this.goMyJobs}  page={"home"}/>
         </div>
         <div className="main-area">
             <div className="sidebar">

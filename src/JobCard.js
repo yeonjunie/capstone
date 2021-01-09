@@ -1,26 +1,43 @@
 import React from 'react';
 import './JobCard.css';
-import Header from "./Header.js";
 import BriefCaseLogo from './briefcase.svg';
-import CompanyLogo1 from './company1.svg';
-import { ContactsOutlined } from '@material-ui/icons';
+import CheckMarkLogo from './checkmark.svg';
+
 
 class JobCard extends React.Component {
-//   goHome = () => {
-//     this.props.history.push("/");
-//   }
+    constructor(props) {
+        super(props);
+        this.state={
+            profileShared: false,
+        } 
+        this.addJob = this.addJob.bind(this);
+        this.removeJob = this.removeJob.bind(this);
+      }
 
-//   goLogin = () => {
-//     this.props.history.push("/login");
-//   }
+    shareProfile(companyName) {
+        if (this.state.profileShared) {
+            return(<div className="share-profile-col"><div className="profile-shared-button" onClick={this.removeJob}> <img className="briefcase-logo" src={CheckMarkLogo} />Profile Shared</div>
+            <div className="profile-shared-desc">{companyName + " will reach out if there’s a fit!"}</div></div>)
+            
 
-//   goSignUp = () => {
-//     this.props.history.push("/registration");
-//   }
+        } else {
+            return(<div className="share-profile-col"><div className="share-profile-button" onClick={this.addJob}> <img className="briefcase-logo" src={BriefCaseLogo} /> Share Profile</div> </div>)
 
-// //   goMyJobs = () => {
-// //       this.props.history.push("/myjobs");
-// //   }
+        }
+        //change logo to the tick mark
+        //change text to profile shared
+        //add element in the share profile col '{company.name+ " will reach out if there’s a fit!"}'
+    }
+
+    addJob() {
+        this.setState({profileShared: true});
+       
+
+    }
+
+    removeJob() {
+        this.setState({profileShared: false});
+    }
   render() {
     const data = this.props.curr_data;
     const company= this.props.company
@@ -30,27 +47,19 @@ class JobCard extends React.Component {
 
             <div className="job-card">
                 <div className="logo-col">
-                    {/* <h1>Logo Here</h1> */}
-                    {/* <div className="image-div"> */}
                     <img className="company-logo" src={company.logo} alt="Company Logo"/>
-                    {/* </div> */}
-                    {/* <div className="company-logo">
-                        
-                    </div> */}
                     
                 </div>
                 <div className="job-desc-col">
-                  {/* <div className ="company-logo"/> */}
                   <div className="job-title">{data[4]}</div>
                   <div className="job-company">{company.name}</div>
-                  <div className="job-desc">{data[1]} <br/>$36/hour <br/> {data[2]  + " experience"} <br/> {data[4] + " State License Required"}</div>
+                  <div className="job-desc">{data[1]} <br/> {data[3]} <br/> {data[2]  + " experience"} <br/> {data[4] + " State License Required"}</div>
                   
 
                 </div>
-                <div className="share-profile-col">
-                    <div className="share-profile-button"> <img className="briefcase-logo" src={BriefCaseLogo} />  Share Profile</div>
+                {this.shareProfile(company.name)}
                       
-                </div>
+                
                 
                 
             </div>

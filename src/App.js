@@ -8,6 +8,7 @@ import Home from "./Home.js";
 import Login from "./Login.js";
 import Registration from "./Registration.js";
 import JobBoard from "./JobBoard.js";
+import MyJobs from "./MyJobs.js"
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
             <Route path="/login" component={Login}/>
             <Route path="/registration" component={Registration}/>
             <Route path="/jobboard" component={JobBoard}/>
+            
           </Switch>
        </div> 
      </BrowserRouter>

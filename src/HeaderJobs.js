@@ -12,13 +12,13 @@ class HeaderJobs extends React.Component {
   render() {
     let goHome = this.props.goToHome;
     let goMyJobs = this.props.goToMyJobs;
-    let goSettings = this.props.goToSettings;
+   
     return (
       <div className="header">
         <div className="header__content">
           <div className="logo" onClick={goHome}> Electry </div>
           <div className="settings">
-            <img src={myJobs}  />
+            <img src={myJobs} onclick={goMyJobs} />
             <div className="between">
             
           
