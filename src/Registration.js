@@ -24,6 +24,18 @@ class Registration extends React.Component {
     this.goToPage = this.goToPage.bind(this);
   }
 
+  goHome = () => {
+    this.props.history.push("/");
+  }
+
+  goLogin = () => {
+    this.props.history.push("/login");
+  }
+
+  goSignUp = () => {
+    this.props.history.push("/registration");
+  }
+
   nextPage(){
     let next = this.state.currentPage + 1;
     this.setState({currentPage:next});
