@@ -40,11 +40,34 @@
   color: #003366;
 }
 
+.myJobsLogo {
+    cursor: pointer;
+}
+
 .briefcase-logo {
     width: 13%;
     margin: 0px 2px 2.5px 0px;
 }
 
+.jobCount {
+    position: absolute;
+    background-color: #0E569E;
+    color: white;
+    height: 20px;
+    width: 20px;
+    margin-left: 35px;
+    margin-top: 30px;
+    /* right: 5px; */
+    /* left: -40px; */
+    border-radius: 15px;
+    cursor: pointer;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    /* line-height: 23px; */
+    text-align: center;
+    /* letter-spacing: 0.02em; */
+}
 
 .between {
   padding-left: 25px;
