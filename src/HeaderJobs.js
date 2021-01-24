@@ -19,6 +19,7 @@ class HeaderJobs extends React.Component {
     let goHome = this.props.goToHome;
     let goMyJobs = this.props.goToMyJobs;
     let myJobCount = this.props.myCurrJobs.length; //get the job count from parents
+    
 
     return (
       <div className="header">

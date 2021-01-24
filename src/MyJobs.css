@@ -13,11 +13,56 @@
   /* flex-grow: 3; */
 
 }
+.recommended-div {
+  display:flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0.25em;
 
-.main-area {
+}
+
+.recommended-jobs-header {
+  /* position: absolute; */
+  /* width: 277px; */
+  /* height: 35px; */
+  /* left: 385px;
+  top: 100px; */
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  text-align: left;
+  /* line-height: 1em; */
+  margin: 1em 0em 0em 2em;
+
+  color: #003366;
+}
+
+.back-to {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  text-align: left;
+  /* line-height: 1em; */
+  margin: 1em 0em 0em 2em;
+
+  color: #003366;
+  cursor: pointer;
+
+}
+
+.main {
   margin-top: 4.5em;
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.jobs-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
 }
 
 /* Tablet */

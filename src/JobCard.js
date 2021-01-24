@@ -8,9 +8,10 @@ class JobCard extends React.Component {
     constructor(props) {
         super(props);
         this.state={
-            profileShared: false,
+            profileShared: this.props.profileShared,
             data: this.props.curr_data,
-            company: this.props.company
+            company: this.props.company,
+            jobBoardFlag: this.props.bool
             // addingJob: this.props.addingJob,
             // removingJob: this.props.removingJob
         } 
@@ -19,15 +20,22 @@ class JobCard extends React.Component {
       }
 
     shareProfile() {
+        if (this.state.jobBoardFlag) {//dealing with JobCard in Jobboard
         if (this.state.profileShared) {
             return(<div className="share-profile-col"><div className="profile-shared-button" onClick={this.removeJob}> <img className="briefcase-logo" src={CheckMarkLogo} />Profile Shared</div>
-            <div className="profile-shared-desc">{this.state.company.name + " will reach out if there’s a fit!"}</div></div>)
+            <div className="profile-shared-desc">{this.state.company.name +" " +"  will reach out if there’s a fit!"}</div></div>)
             
 
         } else {
             return(<div className="share-profile-col"><div className="share-profile-button" onClick={this.addJob}> <img className="briefcase-logo" src={BriefCaseLogo} /> Share Profile</div> </div>)
 
         }
+    } else {
+        let today = new Date()
+        let todayMonth = today.toLocaleString('default', { month: 'short' });
+        let todayDate = today.getDate();
+        return(<div className="myJobs-desc"><p><strong>{"Profile Shared on "+ todayMonth + " " + todayDate} </strong></p><p>{this.state.company.name + "will reach out if there’s a fit!"}</p></div>)
+    }
     }
 
     addJob() {
@@ -43,10 +51,7 @@ class JobCard extends React.Component {
         //update myJobsCount
     }
   render() {
-    // const data = this.props.curr_data;
-    // const company = this.props.company
-    // console.log(this.state.company);
-    // console.log(this.state.data);
+
     
     return (
 
@@ -62,6 +67,7 @@ class JobCard extends React.Component {
                   
 
                 </div>
+                
                 {this.shareProfile()}
                       
                 
