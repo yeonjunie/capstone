@@ -15,7 +15,7 @@
 
 .main {
     display: flex;
-    margin-top: 4.5em;
+    margin-top: 5.25em;
     flex-direction: column;
     
 
@@ -23,10 +23,201 @@
 
 .banner {
     display: flex;
-    height: 100%;
+    height: 40vh;
+    padding: 1em;
+    flex-direction: column;
+
     
 }
 
+.back {
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    
+}
+
+.back:hover {
+    font-weight: 600;
+    
+    
+}
+
+.company-summary {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.company-logo {
+    width: 7%;
+    height: 7%;
+}
+
+.company-name {
+   
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    text-align: center;
+
+    color: #000000;
+}
+
+.company-short-info {
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    padding-left: 1em;
+    padding-right: 1em;
+
+}
+
+.company-location {
+    padding-right: 1em;
+    border-right: 1px solid black;
+
+}
+
+.company-employees {
+    padding-left: 1em;
+
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+}
+
+.about {
+width: 25vw;
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+
+/* identical to box height */
+
+color: #000000;
+margin: 3em;
+
+}
+
+.website {
+
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+
+/* identical to box height */
+
+color: #000000;
+margin: 1em 1em 1em 0em;
+
+}
+
+.contact {
+
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 26px;
+margin: 1em 1em 1em 0em;
+
+/* identical to box height */
+
+color: #000000;
+
+}
+
+.gotologo {
+    width:6%;
+    height:6%;
+    margin-bottom:0.25em;
+    margin-left:0.25em;
+}
+
+.description-area {
+    display:flex;
+    flex-direction:column;
+    margin: 3em;
+    
+}
+
+
+
+.description {
+    
+        display:flex;
+        flex-direction:column;
+        margin: 1.5em 1.5em 1.5em 0em;
+       
+    
+}
+
+.description-text {
+    margin: 1.5em 1.5em 1.5em 0em;
+    color: #828282;
+}
+
+.description-header {
+font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+
+/* identical to box height */
+
+color: #000000;
+
+
+}
+
+.job-postings-area {
+    display:flex;
+    flex-direction:column;
+    /* margin: 3em; */
+    
+}
+
+.job-postings-header {
+    font-style: normal;
+font-weight: 500;
+font-size: 28px;
+line-height: 33px;
+
+}
+
+.job-postings-row {
+    display:flex;
+    flex-direction:row;
+}
+
+.job-posting{
+    text-align: center;
+    margin: 1em 4em;
+}
+
+.posting-company-logo {
+    width: 75%;
+    height: 75%;
+}
+
+.posting-job-title {
+    margin:0.25em;
+    font-size:20px;
+
+}
+
+.posting-yoe {
+    color: #828282;
+    margin:0.25em;
+    font-size:15px;
+
+
+}
 
 /* Tablet */
 @media screen and (max-width: 800px) {
