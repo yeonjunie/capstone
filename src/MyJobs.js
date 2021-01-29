@@ -18,6 +18,7 @@ class MyJobs extends Component {
       
     }
     this.renderJobs = this.renderJobs.bind(this);
+    this.goCompanyPage = this.goCompanyPage.bind(this);
 
   }
 
@@ -36,6 +37,16 @@ class MyJobs extends Component {
       this.props.history.push("/myJobs");
     }
 
+    goCompanyPage = (info) => {
+      this.props.history.push({
+        pathname: '/company',
+        myJobs: this.state.myCurrJobs, // objArray of jobs
+        companyInfo: info,
+        jobBoardFlag: false,
+      })
+  
+    }
+
     renderJobs = (jobArray) => {
       let result = [];
       for (var value of jobArray) {
@@ -50,7 +61,7 @@ class MyJobs extends Component {
         } else {
           currCompany = {name: "Home Electric", logo: CompanyLogo3 };
         }
-        result.push(<JobCard curr_data={currData} company={currCompany} bool={false}/>);
+        result.push(<JobCard curr_data={currData} company={currCompany} bool={false} goCompany={this.goCompanyPage}/>);
         
       }
       return result;

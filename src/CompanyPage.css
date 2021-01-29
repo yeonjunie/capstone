@@ -6,6 +6,11 @@
   font-family: 'Roboto', sans-serif;
 }
 
+.company-page-logo {
+    width:25%;
+    height:25%;
+}
+
 .header-div {
   display: flex;
   align-self: center;
@@ -50,10 +55,7 @@
     align-items: center;
 }
 
-.company-logo {
-    width: 7%;
-    height: 7%;
-}
+
 
 .company-name {
    

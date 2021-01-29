@@ -73,7 +73,7 @@ render() {
               {/* set back so that depending on boolean you go back to that */}
               <div className="back" onClick={this.onClickBack}>{ " ← Back to "+ this.backToText()}</div> 
               <div className="company-summary">
-              <img className="company-logo" src={this.state.companyInfo.logo} alt="Company Logo"/>
+              <img className="company-page-logo" src={this.state.companyInfo.logo} alt="Company Logo"/>
               <div className="company-name">
                   {this.state.companyInfo.name}
               </div>
