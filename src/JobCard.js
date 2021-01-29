@@ -17,6 +17,7 @@ class JobCard extends React.Component {
         } 
         this.addJob = this.addJob.bind(this);
         this.removeJob = this.removeJob.bind(this);
+        this.goCompany = this.goCompany.bind(this);
       }
 
     shareProfile() {
@@ -50,6 +51,10 @@ class JobCard extends React.Component {
         this.props.removingJob(sendData);
         //update myJobsCount
     }
+
+    goCompany(){
+        this.props.goCompany(this.state.company);
+    }
   render() {
 
     
@@ -62,7 +67,8 @@ class JobCard extends React.Component {
                 </div>
                 <div className="job-desc-col">
                   <div className="job-title">{this.state.data[4]}</div>
-                  <div className="job-company">{this.state.company.name}</div>
+                  {/* onClick={this.props.goCompany(this.state.company)} */}
+                  <div className="job-company" onClick={this.goCompany}>{this.state.company.name}</div>
                   <div className="job-desc">{this.state.data[1]} <br/> {this.state.data[3]} <br/> {this.state.data[2]  + " experience"} <br/> {this.state.data[4] + " State License Required"}</div>
                   
 

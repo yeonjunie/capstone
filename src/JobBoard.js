@@ -18,6 +18,7 @@ class JobBoard extends React.Component {
 
     this.addJobUpdate = this.addJobUpdate.bind(this);
     this.removeJobUpdate = this.removeJobUpdate.bind(this);
+    this.goCompanyPage = this.goCompanyPage.bind(this);
 
 
     
@@ -39,6 +40,16 @@ class JobBoard extends React.Component {
 
   goRegistration = () => {
     this.props.history.push("/registration");
+  }
+
+  goCompanyPage = (info) => {
+    this.props.history.push({
+      pathname: '/company',
+      myJobs: this.state.currJobs, // objArray of jobs
+      companyInfo: info,
+      jobBoardFlag: true,
+    })
+
   }
 
   addJobUpdate = (data) => {
@@ -112,9 +123,9 @@ class JobBoard extends React.Component {
                 <div className="recommended-jobs-header">Recommended Jobs</div>
                 </div>
                 <div className="jobs-div">
-                <JobCard curr_data={data} company={companies[0]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[0]}/>
-                <JobCard curr_data={data} company={companies[1]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[1]}/>
-                <JobCard curr_data={data} company={companies[2]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[2]}/>
+                <JobCard curr_data={data} company={companies[0]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[0]} goCompany={this.goCompanyPage}/>
+                <JobCard curr_data={data} company={companies[1]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[1]} goCompany={this.goCompanyPage}/>
+                <JobCard curr_data={data} company={companies[2]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[2]} goCompany={this.goCompanyPage}/>
                 </div>
                 
                 </div>

@@ -15,6 +15,7 @@ class MyJobs extends Component {
     super(props);
     this.state={
       myCurrJobs: this.props.location.myJobs,
+      
     }
     this.renderJobs = this.renderJobs.bind(this);
 
@@ -59,11 +60,12 @@ class MyJobs extends Component {
 
 
   render() {
-    // let myCurrJobs = this.props.location.myJobs;
-    console.log(this.state.myCurrJobs);
+    
+   
+    
     if(this.state.myCurrJobs == null){
       this.state.myCurrJobs = [];
-      // this.state.myCurrJobs = [{companyName: "Eastside Electric", jobTitle: "Master Electrician", location: "Providence", wage: "$20", yoe: "5 years"}];
+      
     }
     return (      
       <div className="myJobs">

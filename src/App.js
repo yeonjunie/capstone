@@ -9,6 +9,7 @@ import Login from "./Login.js";
 import Registration from "./Registration.js";
 import JobBoard from "./JobBoard.js";
 import MyJobs from "./MyJobs.js"
+import CompanyPage from "./CompanyPage.js"
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
             <Route path="/registration" component={Registration}/>
             <Route path="/jobboard" component={JobBoard}/>
             <Route path="/myJobs" component={MyJobs}/>
+            <Route path="/company" component={CompanyPage}/>
             
           </Switch>
        </div> 

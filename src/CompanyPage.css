@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap');
+
+.company-page {
+  display:flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header-div {
+  display: flex;
+  align-self: center;
+
+
+}
+
+.main {
+    display: flex;
+    margin-top: 4.5em;
+    flex-direction: column;
+    
+
+}
+
+.banner {
+    display: flex;
+    height: 100%;
+    
+}
+
+
+/* Tablet */
+@media screen and (max-width: 800px) {
+
+    
+  }
+
+/* Mobile */
+@media screen and (max-width: 530px) {
+ 
+  }
