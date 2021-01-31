@@ -5,6 +5,7 @@ import './MyJobs.css';
 import CompanyLogo1 from './company1.svg';
 import CompanyLogo2 from './company2.svg';
 import CompanyLogo3 from './company3.svg';
+import JobModal from './JobModal.js';
 
 
 
@@ -15,13 +16,27 @@ class MyJobs extends Component {
     super(props);
     this.state={
       myCurrJobs: this.props.location.myJobs,
+      show: false,
+      currJobData: [],
+      currCompany: [],
       
     }
     this.renderJobs = this.renderJobs.bind(this);
     this.goCompanyPage = this.goCompanyPage.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
 
   }
 
+  showModal = (jobData, company) => {
+    this.setState({ show: true });
+    this.setState({ currJobData: jobData });
+    this.setState({ currCompany: company });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
   
 
     goJobBoard = () => {
@@ -61,7 +76,7 @@ class MyJobs extends Component {
         } else {
           currCompany = {name: "Home Electric", logo: CompanyLogo3 };
         }
-        result.push(<JobCard curr_data={currData} company={currCompany} bool={false} goCompany={this.goCompanyPage}/>);
+        result.push(<JobCard curr_data={currData} company={currCompany} bool={false} goCompany={this.goCompanyPage} showModal={this.showModal}/>);
         
       }
       return result;
@@ -84,6 +99,9 @@ class MyJobs extends Component {
       <HeaderJobs goToHome={this.goJobBoard} goToMyJobs={this.goMyJobs}  page={"home"} myCurrJobs={this.state.myCurrJobs}/>
       </div>
       <div className="main">
+      <JobModal show={this.state.show} handleClose={this.hideModal} jobData={this.state.currJobData} companyData={this.state.currCompany}>
+
+</JobModal>
       <div className="recommended-div">
       <div className="back-to" onClick={this.goJobBoard}> &larr; Back to Job Board</div>
       <div className="recommended-jobs-header">{"My Job Applications ("+this.state.myCurrJobs.length+")"}</div>
