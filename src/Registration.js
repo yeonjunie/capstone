@@ -144,7 +144,7 @@ class Registration extends React.Component {
             </RadioGroup>
           </FormControl>
           </div>
-          <div className="buttons">
+          <div className="registration-buttons">
             <div className="goback_visible" onClick={this.backPage}>go back</div>
             <div className="login-button-container">
             {nextButton}
