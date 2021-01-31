@@ -6,19 +6,27 @@ import HeaderJobs from "./HeaderJobs.js";
 import CompanyLogo1 from './company1.svg';
 import CompanyLogo2 from './company2.svg';
 import CompanyLogo3 from './company3.svg';
+
 // import { ContactsOutlined } from '@material-ui/icons';
 import JobCard from './JobCard';
+import JobModal from './JobModal.js';
 
 class JobBoard extends React.Component {
   constructor(props) {
     super(props);
     this.state={
         currJobs: ( this.props.location.myJobs != null)? this.props.location.myJobs: [],
+        show: false,
+        currJobData: [],
+        currCompany: [],
+        
     } 
 
     this.addJobUpdate = this.addJobUpdate.bind(this);
     this.removeJobUpdate = this.removeJobUpdate.bind(this);
     this.goCompanyPage = this.goCompanyPage.bind(this);
+    this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
 
 
     
@@ -26,6 +34,15 @@ class JobBoard extends React.Component {
 
     
   }
+  showModal = (jobData, company) => {
+    this.setState({ show: true });
+    this.setState({ currJobData: jobData });
+    this.setState({ currCompany: company });
+  };
+
+  hideModal = () => {
+    this.setState({ show: false });
+  };
   goHome = () => {
     this.props.history.push("/");
   }
@@ -92,6 +109,7 @@ class JobBoard extends React.Component {
     
     }
 
+
     
   
 
@@ -101,6 +119,9 @@ class JobBoard extends React.Component {
         <HeaderJobs goToHome={this.goHome} goToMyJobs={this.goMyJobs}  page={"home"} myCurrJobs={this.state.currJobs}/>
         </div>
         <div className="main-area">
+        <JobModal show={this.state.show} handleClose={this.hideModal} jobData={this.state.currJobData} companyData={this.state.currCompany}>
+
+        </JobModal>
             <div className="sidebar">
                 <div className="edit-row">
                     <div className="edit" onClick={this.goRegistration}>edit</div> 
@@ -123,9 +144,9 @@ class JobBoard extends React.Component {
                 <div className="recommended-jobs-header">Recommended Jobs</div>
                 </div>
                 <div className="jobs-div">
-                <JobCard curr_data={data} company={companies[0]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[0]} goCompany={this.goCompanyPage}/>
-                <JobCard curr_data={data} company={companies[1]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[1]} goCompany={this.goCompanyPage}/>
-                <JobCard curr_data={data} company={companies[2]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[2]} goCompany={this.goCompanyPage}/>
+                <JobCard curr_data={data} company={companies[0]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[0]} goCompany={this.goCompanyPage} showModal={this.showModal}/>
+                <JobCard curr_data={data} company={companies[1]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[1]} goCompany={this.goCompanyPage} showModal={this.showModal}/>
+                <JobCard curr_data={data} company={companies[2]} addingJob={this.addJobUpdate} removingJob={this.removeJobUpdate} bool={true} profileShared={profileSharedArray[2]} goCompany={this.goCompanyPage} showModal={this.showModal}/>
                 </div>
                 
                 </div>
