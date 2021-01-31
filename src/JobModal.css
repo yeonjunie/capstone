@@ -116,3 +116,23 @@ line-height: 21px;
 
 color: #828282;
 }
+
+/* Tablet */
+@media screen and (max-width: 960px) {
+
+
+  .modal-main {
+    width: 85%;
+  }
+  
+}
+
+/* Mobile */
+@media screen and (max-width: 530px) {
+
+  .modal-main {
+    width: 90%;
+  }
+
+
+}
