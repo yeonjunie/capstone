@@ -80,3 +80,13 @@
     width:0px;
   }
 }
+
+.footer {
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+  padding-left:120px;
+  font-size: 10px;
+  font-weight:100px;
+}

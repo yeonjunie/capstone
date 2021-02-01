@@ -22,13 +22,14 @@ class Home extends React.Component {
         <div className="welcome-desc">Join our network of electricians, mechanics and much more</div>
         <div className="survey-desc">Fill out a <b>3 minute survey</b> to find out where you’re needed!</div>
         <div className="registration-component">
-        <div className="registration-button">        
+        <div className="registration-button" onClick={this.goSignUp}>        
           <div className="registration-desc">click here to get started</div>
         </div>
       </div>
       <div className="background-img-container">
-        <img class="main-img" src="https://i.ibb.co/Jj5N77W/Screen-Shot-2020-12-27-at-17-23-04.png"/>
+        <img className="main-img" src="https://i.ibb.co/Jj5N77W/Screen-Shot-2020-12-27-at-17-23-04.png"/>
       </div>
+      <div className="footer">made with love by Yeon Jun Kim and Snigdha Sinha</div>
       </div>
       );
   }

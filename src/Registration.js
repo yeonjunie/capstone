@@ -129,6 +129,10 @@ class Registration extends React.Component {
       let first = data[this.state.currentPage-1].options[0];
       let second = data[this.state.currentPage-1].options[1];
       let third = data[this.state.currentPage-1].options[2];
+      let index = this.state.currentPage;
+      if (this.state.visitedPage[index] === false) {
+        nextButton = <div className="login-button disable-button">{buttonText}</div>
+      }
       content = 
       <div className="question-container">
           <ProgressBar goToPage={this.goToPage} currentPage ={this.state.currentPage} sections={this.sections}/>
